@@ -31,16 +31,27 @@ public class KatexParser {
                     partText.append(character)
                 }
             case .parsingFormula:
-                if character != "$" {
-                    partText.append(character)
+                if character == "$" {
                     parts.append(KatexPart(
                         isFormula: true,
                         text: partText
                     ))
                     partText = ""
+                    state = .waitingForPart
+                } else {
+                    partText.append(character)
                 }
             case .parsingPlainText:
-                partText.append(character)
+                if character == "$" {
+                    parts.append(KatexPart(
+                        isFormula: false,
+                        text: partText
+                    ))
+                    partText = ""
+                    state = .parsingFormula
+                } else {
+                    partText.append(character)
+                }
             }
         }
         if !partText.isEmpty {
