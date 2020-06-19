@@ -21,4 +21,14 @@ class KatekParserTests : XCTestCase {
         XCTAssertEqual("String with no equations", parts[0].text)
     }
 
+    func testParser_WhenIsTextWithASymbol_ReturnsASingleFormulaPart() {
+        let parser = KatexParser(rawContent: "$a$")
+
+        let parts = parser.parse()
+
+        XCTAssertEqual(1, parts.count)
+        XCTAssertTrue(parts[0].isFormula)
+        XCTAssertEqual("a", parts[0].text)
+    }
+
 }
