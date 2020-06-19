@@ -7,7 +7,14 @@ public class KatexContent {
     }
 
     public func convert() -> String {
-        return rawContent.replacingOccurrences(of: "$", with: "<span class=\"tex\">")
+        let katexParts = KatexParser(rawContent: rawContent).parse()
+        return katexParts.map { katexPart in
+            if katexPart.isFormula {
+                return "<span class=\"tex\">\(katexPart.text)</span>"
+            } else {
+                return katexPart.text
+            }
+        }.joined()
     }
 
 }

@@ -19,13 +19,20 @@ class KatekContentTests : XCTestCase {
         XCTAssertEqual("This is some text", convertedContent)
     }
 
-    func testConvert_WhenStringIsOneSymbol_ReplacesWithOpeningSpanAndTexClass() {
+    func testConvert_WhenStringIsOneSymbol_WrapsInSpan() {
         let content = KatexContent(rawContent: "$a$")
 
         let convertedContent = content.convert()
 
-        let startsWithSpan = convertedContent.starts(with: "<span class=\"tex\"")
-        XCTAssertTrue(startsWithSpan, "Expected converted string to open a span")
+        XCTAssertEqual("<span class=\"tex\">a</span>", convertedContent)
+    }
+
+    func testConvert_WhenStringHasPlainTextAndFormula_WrapsFormula() {
+        let content = KatexContent(rawContent: "$a$ b")
+
+        let convertedContent = content.convert()
+
+        XCTAssertEqual("<span class=\"tex\">a</span> b", convertedContent)
     }
 
 }
