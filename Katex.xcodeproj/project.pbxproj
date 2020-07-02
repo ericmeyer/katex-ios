@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0728171624AD3D950015DB3C /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0728171424AD3D950015DB3C /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0728171724AD3D950015DB3C /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0728171524AD3D950015DB3C /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0728171924AD3DE30015DB3C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0728171524AD3D950015DB3C /* Nimble.framework */; };
+		0728171A24AD3DE50015DB3C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0728171424AD3D950015DB3C /* Quick.framework */; };
 		0756240E249D38B7007F0065 /* Katex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07562404249D38B7007F0065 /* Katex.framework */; };
 		07562415249D38B7007F0065 /* Katex.h in Headers */ = {isa = PBXBuildFile; fileRef = 07562407249D38B7007F0065 /* Katex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0756241F249D3972007F0065 /* KatexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0756241E249D3972007F0065 /* KatexView.swift */; };
 		07562421249D3A10007F0065 /* KatexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07562420249D3A10007F0065 /* KatexView.xib */; };
-		07562423249D3A9C007F0065 /* KatexViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07562422249D3A9C007F0065 /* KatexViewTests.swift */; };
+		07562423249D3A9C007F0065 /* KatexViewSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07562422249D3A9C007F0065 /* KatexViewSpecs.swift */; };
 		07562427249D3C45007F0065 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07562426249D3C45007F0065 /* Test.storyboard */; };
 		07562429249D3CE2007F0065 /* KatexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07562428249D3CE2007F0065 /* KatexViewController.swift */; };
-		07562433249D5C65007F0065 /* KatexContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07562432249D5C65007F0065 /* KatexContentTests.swift */; };
+		07562433249D5C65007F0065 /* KatexContentSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07562432249D5C65007F0065 /* KatexContentSpecs.swift */; };
 		07562435249D5CEE007F0065 /* KatexContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07562434249D5CEE007F0065 /* KatexContent.swift */; };
-		07562437249D62B1007F0065 /* KatexParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07562436249D62B1007F0065 /* KatexParserTests.swift */; };
+		07562437249D62B1007F0065 /* KatexParserSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07562436249D62B1007F0065 /* KatexParserSpecs.swift */; };
 		07562439249D6338007F0065 /* KatexParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07562438249D6338007F0065 /* KatexParser.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +34,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0728171324AD3D8B0015DB3C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0728171624AD3D950015DB3C /* Quick.framework in CopyFiles */,
+				0728171724AD3D950015DB3C /* Nimble.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0728171224AD3D790015DB3C /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = "<group>"; };
+		0728171424AD3D950015DB3C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		0728171524AD3D950015DB3C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		07562404249D38B7007F0065 /* Katex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Katex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07562407249D38B7007F0065 /* Katex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Katex.h; sourceTree = "<group>"; };
 		07562408249D38B7007F0065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,12 +59,12 @@
 		07562414249D38B7007F0065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0756241E249D3972007F0065 /* KatexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatexView.swift; sourceTree = "<group>"; };
 		07562420249D3A10007F0065 /* KatexView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KatexView.xib; sourceTree = "<group>"; };
-		07562422249D3A9C007F0065 /* KatexViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatexViewTests.swift; sourceTree = "<group>"; };
+		07562422249D3A9C007F0065 /* KatexViewSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatexViewSpecs.swift; sourceTree = "<group>"; };
 		07562426249D3C45007F0065 /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		07562428249D3CE2007F0065 /* KatexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatexViewController.swift; sourceTree = "<group>"; };
-		07562432249D5C65007F0065 /* KatexContentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatexContentTests.swift; sourceTree = "<group>"; };
+		07562432249D5C65007F0065 /* KatexContentSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatexContentSpecs.swift; sourceTree = "<group>"; };
 		07562434249D5CEE007F0065 /* KatexContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatexContent.swift; sourceTree = "<group>"; };
-		07562436249D62B1007F0065 /* KatexParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatexParserTests.swift; sourceTree = "<group>"; };
+		07562436249D62B1007F0065 /* KatexParserSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatexParserSpecs.swift; sourceTree = "<group>"; };
 		07562438249D6338007F0065 /* KatexParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatexParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,18 +81,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				0756240E249D38B7007F0065 /* Katex.framework in Frameworks */,
+				0728171924AD3DE30015DB3C /* Nimble.framework in Frameworks */,
+				0728171A24AD3DE50015DB3C /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0728171824AD3DE30015DB3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		075623FA249D38B7007F0065 = {
 			isa = PBXGroup;
 			children = (
+				0728171524AD3D950015DB3C /* Nimble.framework */,
+				0728171424AD3D950015DB3C /* Quick.framework */,
 				07562406249D38B7007F0065 /* Katex */,
 				07562411249D38B7007F0065 /* KatexTests */,
 				07562405249D38B7007F0065 /* Products */,
+				0728171224AD3D790015DB3C /* Carthage */,
+				0728171824AD3DE30015DB3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,11 +121,11 @@
 		07562406249D38B7007F0065 /* Katex */ = {
 			isa = PBXGroup;
 			children = (
+				07562434249D5CEE007F0065 /* KatexContent.swift */,
+				07562438249D6338007F0065 /* KatexParser.swift */,
 				0756241E249D3972007F0065 /* KatexView.swift */,
 				07562420249D3A10007F0065 /* KatexView.xib */,
 				07562425249D3BCE007F0065 /* SupportingFiles */,
-				07562434249D5CEE007F0065 /* KatexContent.swift */,
-				07562438249D6338007F0065 /* KatexParser.swift */,
 			);
 			path = Katex;
 			sourceTree = "<group>";
@@ -100,11 +134,11 @@
 			isa = PBXGroup;
 			children = (
 				07562426249D3C45007F0065 /* Test.storyboard */,
+				07562432249D5C65007F0065 /* KatexContentSpecs.swift */,
+				07562436249D62B1007F0065 /* KatexParserSpecs.swift */,
 				07562428249D3CE2007F0065 /* KatexViewController.swift */,
-				07562422249D3A9C007F0065 /* KatexViewTests.swift */,
+				07562422249D3A9C007F0065 /* KatexViewSpecs.swift */,
 				07562424249D3BC0007F0065 /* SupportingFiles */,
-				07562432249D5C65007F0065 /* KatexContentTests.swift */,
-				07562436249D62B1007F0065 /* KatexParserTests.swift */,
 			);
 			path = KatexTests;
 			sourceTree = "<group>";
@@ -165,6 +199,7 @@
 				07562409249D38B7007F0065 /* Sources */,
 				0756240A249D38B7007F0065 /* Frameworks */,
 				0756240B249D38B7007F0065 /* Resources */,
+				0728171324AD3D8B0015DB3C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -248,10 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07562433249D5C65007F0065 /* KatexContentTests.swift in Sources */,
+				07562433249D5C65007F0065 /* KatexContentSpecs.swift in Sources */,
 				07562429249D3CE2007F0065 /* KatexViewController.swift in Sources */,
-				07562437249D62B1007F0065 /* KatexParserTests.swift in Sources */,
-				07562423249D3A9C007F0065 /* KatexViewTests.swift in Sources */,
+				07562437249D62B1007F0065 /* KatexParserSpecs.swift in Sources */,
+				07562423249D3A9C007F0065 /* KatexViewSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +478,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5YUS5LQ433;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = KatexTests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -462,6 +501,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5YUS5LQ433;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = KatexTests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
