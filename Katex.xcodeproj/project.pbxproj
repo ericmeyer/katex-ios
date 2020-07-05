@@ -11,6 +11,8 @@
 		0728171724AD3D950015DB3C /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0728171524AD3D950015DB3C /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0728171924AD3DE30015DB3C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0728171524AD3D950015DB3C /* Nimble.framework */; };
 		0728171A24AD3DE50015DB3C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0728171424AD3D950015DB3C /* Quick.framework */; };
+		0728171C24AEDF070015DB3C /* KatexTemplateSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728171B24AEDF070015DB3C /* KatexTemplateSpecs.swift */; };
+		0728171E24AF86680015DB3C /* KatexTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728171D24AF86680015DB3C /* KatexTemplate.swift */; };
 		0756240E249D38B7007F0065 /* Katex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07562404249D38B7007F0065 /* Katex.framework */; };
 		07562415249D38B7007F0065 /* Katex.h in Headers */ = {isa = PBXBuildFile; fileRef = 07562407249D38B7007F0065 /* Katex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0756241F249D3972007F0065 /* KatexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0756241E249D3972007F0065 /* KatexView.swift */; };
@@ -52,6 +54,8 @@
 		0728171224AD3D790015DB3C /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = "<group>"; };
 		0728171424AD3D950015DB3C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		0728171524AD3D950015DB3C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		0728171B24AEDF070015DB3C /* KatexTemplateSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatexTemplateSpecs.swift; sourceTree = "<group>"; };
+		0728171D24AF86680015DB3C /* KatexTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatexTemplate.swift; sourceTree = "<group>"; };
 		07562404249D38B7007F0065 /* Katex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Katex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07562407249D38B7007F0065 /* Katex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Katex.h; sourceTree = "<group>"; };
 		07562408249D38B7007F0065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 			children = (
 				07562434249D5CEE007F0065 /* KatexContent.swift */,
 				07562438249D6338007F0065 /* KatexParser.swift */,
+				0728171D24AF86680015DB3C /* KatexTemplate.swift */,
 				0756241E249D3972007F0065 /* KatexView.swift */,
 				07562420249D3A10007F0065 /* KatexView.xib */,
 				07562425249D3BCE007F0065 /* SupportingFiles */,
@@ -136,6 +141,7 @@
 				07562426249D3C45007F0065 /* Test.storyboard */,
 				07562432249D5C65007F0065 /* KatexContentSpecs.swift */,
 				07562436249D62B1007F0065 /* KatexParserSpecs.swift */,
+				0728171B24AEDF070015DB3C /* KatexTemplateSpecs.swift */,
 				07562428249D3CE2007F0065 /* KatexViewController.swift */,
 				07562422249D3A9C007F0065 /* KatexViewSpecs.swift */,
 				07562424249D3BC0007F0065 /* SupportingFiles */,
@@ -276,6 +282,7 @@
 				0756241F249D3972007F0065 /* KatexView.swift in Sources */,
 				07562439249D6338007F0065 /* KatexParser.swift in Sources */,
 				07562435249D5CEE007F0065 /* KatexContent.swift in Sources */,
+				0728171E24AF86680015DB3C /* KatexTemplate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +292,7 @@
 			files = (
 				07562433249D5C65007F0065 /* KatexContentSpecs.swift in Sources */,
 				07562429249D3CE2007F0065 /* KatexViewController.swift in Sources */,
+				0728171C24AEDF070015DB3C /* KatexTemplateSpecs.swift in Sources */,
 				07562437249D62B1007F0065 /* KatexParserSpecs.swift in Sources */,
 				07562423249D3A9C007F0065 /* KatexViewSpecs.swift in Sources */,
 			);
